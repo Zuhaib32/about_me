@@ -2,73 +2,57 @@ import './Education.css'
 
 const education = [
   {
-    degree: 'B.Sc. Computer Science',
-    school: 'University of California, Berkeley',
-    period: '2015 – 2019',
-    details: 'Graduated with Honors · GPA 3.87 · Dean\'s List',
-    highlights: ['Distributed Systems', 'Machine Learning', 'Compilers', 'HCI'],
+    school: 'Metropolitan State University',
+    degree: 'Bachelor of Science in Computer Science',
+    date: 'Expected Graduation: Fall 2026',
+    desc: 'Focused on software engineering, databases, programming languages, web development, and cybersecurity concepts through hands-on coursework and technical projects.',
   },
   {
-    degree: 'Full-Stack Web Development',
-    school: 'App Academy',
-    period: '2019',
-    details: 'Intensive 16-week bootcamp · Top 5% cohort',
-    highlights: ['Rails', 'React/Redux', 'SQL', 'Algorithms'],
+    school: 'Anoka-Ramsey Community College',
+    degree: 'Computer Science Transfer Pathway',
+    date: 'Transferred Post Spring 2024',
+    desc: 'Completed foundational coursework in computer science and mathematics before transferring to Metropolitan State University.',
   },
-]
-
-const certs = [
-  { name: 'AWS Solutions Architect – Associate', year: '2023', issuer: 'Amazon Web Services' },
-  { name: 'Professional Scrum Master I (PSM I)', year: '2022', issuer: 'Scrum.org' },
-  { name: 'Google Cloud Professional Developer', year: '2021', issuer: 'Google Cloud' },
 ]
 
 export default function Education() {
   return (
-    <section id="education" className="section">
+    <section id="education" className="section education-section">
       <div className="container">
-        <p className="section-label fade-up">Background</p>
+
+        <p className="section-label fade-up">
+          Education
+        </p>
+
         <h2 className="section-title fade-up delay-1">
-          Education &amp; <em>Certifications</em>
+          Academic <em>Background</em>
         </h2>
 
-        <div className="edu-layout">
-          {/* Education timeline */}
-          <div className="edu-timeline">
-            {education.map((e, i) => (
-              <div key={e.degree} className={`edu-card fade-up delay-${i + 2}`}>
-                <div className="edu-period">{e.period}</div>
-                <div className="edu-content">
-                  <div className="edu-dot" />
-                  <h3 className="edu-degree">{e.degree}</h3>
-                  <p className="edu-school">{e.school}</p>
-                  <p className="edu-details">{e.details}</p>
-                  <div className="edu-highlights">
-                    {e.highlights.map((h) => (
-                      <span key={h} className="edu-highlight">{h}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="education-list">
+          {education.map((e, i) => (
+            <div
+              key={e.school}
+              className={`education-card fade-up delay-${i + 2}`}
+            >
+              <h3 className="education-school">
+                {e.school}
+              </h3>
 
-          {/* Certifications */}
-          <div className="certs-panel fade-up delay-4">
-            <h3 className="certs-title">Certifications</h3>
-            <div className="certs-list">
-              {certs.map((c) => (
-                <div key={c.name} className="cert-item">
-                  <div className="cert-check">✓</div>
-                  <div className="cert-info">
-                    <span className="cert-name">{c.name}</span>
-                    <span className="cert-meta">{c.issuer} · {c.year}</span>
-                  </div>
-                </div>
-              ))}
+              <p className="education-degree">
+                {e.degree}
+              </p>
+
+              <span className="education-date">
+                {e.date}
+              </span>
+
+              <p className="education-desc">
+                {e.desc}
+              </p>
             </div>
-          </div>
+          ))}
         </div>
+
       </div>
     </section>
   )
