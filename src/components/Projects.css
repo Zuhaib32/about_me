@@ -1,0 +1,130 @@
+.projects-section {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.projects-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 56px 1fr 40px;
+  gap: 2rem;
+  align-items: start;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.25s;
+  cursor: pointer;
+  position: relative;
+}
+
+.project-row::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(201,168,76,0.04) 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-row:hover::before { opacity: 1; }
+
+.project-row:first-child { border-top: 1px solid var(--border); }
+
+.project-row.featured .proj-title {
+  color: var(--gold-light);
+}
+
+/* ── Number ── */
+.proj-num {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--subtle);
+  padding-top: 0.35rem;
+  letter-spacing: 0.05em;
+  transition: color 0.25s;
+}
+
+.project-row:hover .proj-num { color: var(--gold); }
+
+/* ── Info ── */
+.proj-titles {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+
+.proj-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 400;
+  color: var(--white);
+  transition: color 0.25s;
+  line-height: 1.1;
+}
+
+.project-row:hover .proj-title { color: var(--gold-light); }
+
+.proj-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proj-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 1rem;
+}
+
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.proj-tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* ── Arrow ── */
+.proj-arrow {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  transition: border-color 0.25s, color 0.25s, transform 0.3s var(--ease-out-expo);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.proj-arrow svg { width: 16px; height: 16px; }
+
+.project-row:hover .proj-arrow {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 600px) {
+  .project-row { grid-template-columns: 36px 1fr 32px; gap: 1rem; }
+}
