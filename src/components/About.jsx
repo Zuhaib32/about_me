@@ -1,23 +1,22 @@
 import './About.css'
 
 const stats = [
-  { value: '50+', label: 'Projects shipped' },
-  { value: '12+', label: 'Happy clients' },
-  { value: '5+', label: 'Years building' },
-  { value: '∞', label: 'Cups of coffee' },
+  { value: '3+', label: 'Programming Languages' },
+  { value: '10+', label: 'Completed Projects' },
+  { value: '2026', label: 'Expected Graduation' },
+  { value: '∞', label: 'Learning Mindset' },
 ]
-
-export default function About() {
+export default function About(){
   return (
     <section id="about" className="section about-section">
       <div className="container">
         <div className="about-grid">
-          {/* Left: photo placeholder */}
+          {/* Left: initials */}
           <div className="about-visual fade-up">
             <div className="about-img-wrap">
               <div className="about-img-bg" />
               <div className="about-img-frame">
-                <div className="about-initials">AM</div>
+                <div className="about-initials">ZA</div>
               </div>
               <div className="about-img-deco" />
             </div>
@@ -25,26 +24,31 @@ export default function About() {
 
           {/* Right: text */}
           <div className="about-text">
-            <p className="section-label fade-up">Who I am</p>
+            <p className="section-label fade-up">
+              About Me
+            </p>
+
             <h2 className="section-title fade-up delay-1">
-              Turning ideas into<br /><em>living software</em>
+              Building practical<br />
+              <em> software solutions</em>
             </h2>
 
             <p className="about-para fade-up delay-2">
-              Hey — I'm Alex, a full-stack developer based in San Francisco. I've spent the
-              last five years building products that people actually enjoy using, from
-              early-stage startups to enterprise platforms.
+              Hey — I’m Zuhaib, a Computer Science student at
+              Metropolitan State University with interests in software
+              engineering, databases, web development, and cybersecurity.
             </p>
 
             <p className="about-para fade-up delay-3">
-              My approach blends rigorous engineering with a genuine love for design. I
-              believe the best digital products aren't just functional — they're
-              <em> delightful</em>. I obsess over the small details that make interactions
-              feel smooth and intentional.
+              I enjoy building hands-on projects that strengthen my
+              technical skills and problem-solving abilities. My experience
+              includes Java programming, SQL database systems, React web
+              applications, and object-oriented software design.
             </p>
 
             <p className="about-para fade-up delay-4">
-              Outside of code: hiking trails, analog photography, and strong espresso.
+              Outside of coding, I enjoy fitness, technology, gaming,
+              and learning modern tools used in the software industry.
             </p>
 
             {/* Stats */}
@@ -56,6 +60,7 @@ export default function About() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </div>
