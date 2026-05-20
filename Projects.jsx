@@ -5,19 +5,10 @@ const projects = [
     num: '01',
     title: 'eSports Database Project',
     subtitle: 'SQL Database Design',
-    desc: 'Designed and implemented a relational SQL database system for an eSports management project. Created tables, relationships, business rules, and SQL queries to organize teams, players, matches, tournaments, and related data.',
-    tags: ['SQL', 'Database Design', 'Queries', 'ERD'],
+    desc: 'Designed and implemented a relational SQL database system for an eSports management project. Created tables, relationships, business rules, and SQL queries to manage teams, players, tournaments, matches, and statistics.',
+    tags: ['SQL', 'Database Design', 'ERD', 'Queries'],
     link: '#',
     featured: true,
-  },
-  {
-    num: '02',
-    title: 'About Me Website',
-    subtitle: 'React / Vite Portfolio',
-    desc: 'Built and deployed a responsive single page portfolio website using React, Vite, GitHub, and Vercel.',
-    tags: ['React', 'Vite', 'GitHub', 'Vercel'],
-    link: '#',
-    featured: false,
   },
 ]
 
@@ -25,16 +16,16 @@ export default function Projects() {
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
-        <p className="section-label fade-up">School projects</p>
+        <p className="section-label fade-up">School Project</p>
+
         <h2 className="section-title fade-up delay-1">
-          Academic <em>Projects</em>
+          eSports <em>Database</em>
         </h2>
 
         <div className="projects-list">
           {projects.map((p, i) => (
-            <a
+            <div
               key={p.num}
-              href={p.link}
               className={`project-row fade-up delay-${i + 2} ${p.featured ? 'featured' : ''}`}
             >
               <span className="proj-num">{p.num}</span>
@@ -55,13 +46,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-
-              <div className="proj-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
