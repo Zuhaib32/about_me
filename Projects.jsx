@@ -3,37 +3,19 @@ import './Projects.css'
 const projects = [
   {
     num: '01',
-    title: 'Luminary',
-    subtitle: 'AI-Powered Design System',
-    desc: 'A comprehensive design token system with AI-assisted component generation. Used by 3 product teams to ship consistent UIs at 2× the speed.',
-    tags: ['React', 'TypeScript', 'Figma API', 'OpenAI'],
+    title: 'eSports Database Project',
+    subtitle: 'SQL Database Design',
+    desc: 'Designed and implemented a relational SQL database system for an eSports management project. Created tables, relationships, business rules, and SQL queries to organize teams, players, matches, tournaments, and related data.',
+    tags: ['SQL', 'Database Design', 'Queries', 'ERD'],
     link: '#',
     featured: true,
   },
   {
     num: '02',
-    title: 'Helios',
-    subtitle: 'Real-Time Analytics Dashboard',
-    desc: 'Live data visualization platform processing 1M+ events/day with sub-100ms query times via custom WebSocket architecture.',
-    tags: ['Next.js', 'Postgres', 'Redis', 'D3.js'],
-    link: '#',
-    featured: false,
-  },
-  {
-    num: '03',
-    title: 'Arcana',
-    subtitle: 'E-Commerce Platform',
-    desc: 'Full-stack marketplace with ML-powered recommendations, Stripe payments, and a custom headless CMS. 40% lift in conversion.',
-    tags: ['Vue 3', 'FastAPI', 'Stripe', 'Algolia'],
-    link: '#',
-    featured: false,
-  },
-  {
-    num: '04',
-    title: 'Pulse',
-    subtitle: 'Team Collaboration App',
-    desc: 'Async-first project management tool built for remote teams. Real-time presence, rich text editing, and Notion-like blocks.',
-    tags: ['React', 'Socket.io', 'Prisma', 'AWS'],
+    title: 'About Me Website',
+    subtitle: 'React / Vite Portfolio',
+    desc: 'Built and deployed a responsive single page portfolio website using React, Vite, GitHub, and Vercel.',
+    tags: ['React', 'Vite', 'GitHub', 'Vercel'],
     link: '#',
     featured: false,
   },
@@ -43,9 +25,9 @@ export default function Projects() {
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
-        <p className="section-label fade-up">Selected work</p>
+        <p className="section-label fade-up">School projects</p>
         <h2 className="section-title fade-up delay-1">
-          Recent <em>Projects</em>
+          Academic <em>Projects</em>
         </h2>
 
         <div className="projects-list">
@@ -62,10 +44,14 @@ export default function Projects() {
                   <h3 className="proj-title">{p.title}</h3>
                   <span className="proj-subtitle">{p.subtitle}</span>
                 </div>
+
                 <p className="proj-desc">{p.desc}</p>
+
                 <div className="proj-tags">
                   {p.tags.map((t) => (
-                    <span key={t} className="proj-tag">{t}</span>
+                    <span key={t} className="proj-tag">
+                      {t}
+                    </span>
                   ))}
                 </div>
               </div>
